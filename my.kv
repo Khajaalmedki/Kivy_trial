@@ -1,0 +1,336 @@
+<Label>:
+    font_size : 80
+    size_hint : 0.1,0.2
+
+
+WindowManager:
+    MainWindow:
+    SecondWindow:
+    second_cpaper_window:
+
+<MainWindow>:
+    name : 'main'
+
+    FloatLayout:
+
+        Label:
+            markup : True
+            text : '[b][color=ff0000]E[/color][color=000000]xam[/color][color=ff0000]P[/color][color=000000]ortal[/color][/b]'
+            pos_hint: {'x': 0.3,'top': 0.99}
+            font_name : 'C:\\Users\\96650\\AppData\\Local\\Microsoft\\Windows\\Fonts\\Capture it'
+
+        Button:
+
+            pos_hint: {'x': 0.15,'top': 0.65}
+            font_size : 20
+            size_hint : 0.24,0.08
+            text : 'Create Portal'
+            on_release:
+                app.root.current = 'create paper'
+                root.manager.transition.direction = 'left'
+
+        Button:
+            text : 'Enter Portal'
+            pos_hint: {'x': 0.15,'top': 0.53}
+            font_size : 20
+            size_hint : 0.24,0.08
+            background_color : 1,1,1,1
+
+        Button:
+            text : 'My Portals'
+            pos_hint: {'x': 0.15,'top': 0.41}
+            font_size : 20
+            size_hint : 0.24,0.08
+
+
+        Button:
+            text : 'My Reports'
+            pos_hint: {'x': 0.15,'top': 0.29}
+            font_size : 20
+            size_hint : 0.24,0.08
+<SecondWindow>:
+
+    name : 'create paper'
+
+    school_name : nsi
+    portal_name : nep
+    date_exam : den
+    time_h : teh
+    time_m : tem
+    time_s : tes
+
+    FloatLayout:
+
+        Button:
+            pos_hint: {'x': 0.01,'top': 0.08}
+            font_size : 20
+            size_hint : 0.1,0.06
+            text : 'Back'
+            on_release:
+                app.root.current = 'main'
+                root.manager.transition.direction = 'right'
+
+        Label:
+            markup : True
+            text : "[u][b]Fill Up The Following Details[/b][/u]"
+            pos_hint : {'x':0.28,'top':1}
+            size_hint : 0.4 , 0.2
+            font_size : 24
+            color : 0,0,0,1
+
+        Label:
+            markup : True
+            text : "[b]>> Name Of School or Institution :[/b]"
+            pos_hint : {'x':0.15,'top':0.86}
+            size_hint : 0.4 , 0.2
+            font_size : 18
+            color : 0,0,0,1
+
+        TextInput:
+            id : nsi
+            multiline : False
+            pos_hint : {'x':0.22 , 'top': 0.72}
+            size_hint : 0.5,0.06
+            font_size : 18
+
+        Label:
+            markup : True
+            text : "[b]>> Name Of Exam Portal :[/b]"
+            pos_hint : {'x':0.15,'top':0.69}
+            size_hint : 0.32 , 0.2
+            font_size : 18
+            color : 0,0,0,1
+
+        TextInput:
+            id : nep
+            multiline : False
+            pos_hint : {'x':0.22 , 'top': 0.55}
+            size_hint : 0.5,0.06
+            font_size : 18
+
+        Label:
+            markup : True
+            text : "[b]>> Date of Examination :[/b]"
+            pos_hint : {'x':0.15,'top':0.52}
+            size_hint : 0.302 , 0.2
+            font_size : 18
+            color : 0,0,0,1
+
+        TextInput:
+            id : den
+            multiline : False
+            pos_hint : {'x':0.22 , 'top': 0.36}
+            size_hint : 0.5,0.06
+            font_size : 18
+
+        Label:
+            markup : True
+            text : "[b]>> Time Of Examination :[/b]"
+            pos_hint : {'x':0.15,'top':0.33}
+            size_hint : 0.316 , 0.2
+            font_size : 18
+            color : 0,0,0,1
+
+        TextInput:
+            id : teh
+            text : '00'
+            multiline : False
+            pos_hint : {'x':0.22 , 'top': 0.18}
+            size_hint : 0.06,0.072
+            font_size : 26
+
+        Label:
+            markup : True
+            text : "[b]hours[/b]"
+            pos_hint : {'x':0.29,'top':0.18}
+            size_hint : 0.06 , 0.072
+            font_size : 18
+            color : 0,0,0,1
+
+        TextInput:
+            id : tem
+            multiline : False
+            text : '00'
+            pos_hint : {'x':0.36 , 'top': 0.18}
+            size_hint : 0.06,0.072
+            font_size : 26
+
+        Label:
+            markup : True
+            text : "[b]min[/b]"
+            pos_hint : {'x':0.42,'top':0.18}
+            size_hint : 0.06 , 0.072
+            font_size : 18
+            color : 0,0,0,1
+
+        TextInput:
+            id : tes
+            multiline : False
+            text : '00'
+            pos_hint : {'x':0.48 , 'top': 0.18}
+            size_hint : 0.06,0.072
+            font_size : 26
+
+        Label:
+            markup : True
+            text : "[b]seconds[/b]"
+            pos_hint : {'x':0.57,'top':0.18}
+            size_hint : 0.06 , 0.072
+            font_size : 18
+            color : 0,0,0,1
+
+        Widget:
+            canvas:
+                Color:
+                    rgba:0,0,0,1
+                RoundedRectangle:
+                    size : 10,10
+                    pos : 330 , 22
+                    radius : [1500,1500,1500,1500]
+
+        Widget:
+            canvas:
+                Color:
+                    rgba:211/255, 208/255, 208/255,1
+                RoundedRectangle:
+                    size : 10,10
+                    pos : 360 , 22
+                    radius : [1500,1500,1500,1500]
+
+        Widget:
+            canvas:
+                Color:
+                    rgba:211/255, 208/255, 208/255,1
+                RoundedRectangle:
+                    size : 10,10
+                    pos : 390 , 22
+                    radius : [1500,1500,1500,1500]
+
+        Button:
+            pos_hint: {'x': 0.888 ,'top': 0.08}
+            font_size : 20
+            size_hint : 0.1,0.06
+            text : 'Next'
+            on_release:
+                app.root.current = 'second_cpaper' #if nsi.text != '' and nep.text != '' and den.text != '' and tem.text != '00' else 'create paper'
+                root.manager.transition.direction = 'left'
+
+
+
+<second_cpaper_window>:
+    name : 'second_cpaper'
+
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+
+        FloatLayout:
+
+            size_hint : None , None
+            size : 800 , 800
+
+
+            Button:
+                pos_hint: {'x': 0.01,'top': 0.08}
+                font_size : 20
+                size_hint : 0.1,0.06
+                text : 'Back'
+                on_release:
+                    app.root.current = 'create paper'
+                    root.manager.transition.direction = 'right'
+
+            Widget:
+                canvas:
+                    Color:
+                        rgba:211/255, 208/255, 208/255,1
+                    RoundedRectangle:
+                        size : 10,10
+                        pos : 330 , 22
+                        radius : [1500,1500,1500,1500]
+
+            Widget:
+                canvas:
+                    Color:
+                        rgba:0,0,0,1
+                    RoundedRectangle:
+                        size : 10,10
+                        pos : 360 , 22
+                        radius : [1500,1500,1500,1500]
+
+            Widget:
+                canvas:
+                    Color:
+                        rgba:211/255, 208/255, 208/255,1
+                    RoundedRectangle:
+                        size : 10,10
+                        pos : 390 , 22
+                        radius : [1500,1500,1500,1500]
+
+            Label:
+                markup : True
+                text : '[color=#3F9603]Next Step,[/color]'
+                font_size : 40
+                pos_hint : {'x':0.28, 'top':1}
+                size_hint : 0.4 , 0.1
+                color : 0,0,0,1
+
+
+            Label:
+                markup : True
+                text : '[b]What All Details You Want Students\nTo Fulfill Before Writing The Exam ?[/b]'
+                font_size : 20
+                pos_hint : {'x':0.28, 'top':0.86}
+                size_hint : 0.4 , 0.1
+                color : 0,0,0,1
+
+            TextInput:
+                #background_color : 245/255, 241/255, 239/255 ,1
+                multiline : False
+                size_hint : 0.4,0.09
+                pos_hint : {'x':0.27 , 'top': 0.72}
+                font_size : 20
+                padding_y : [13]
+                padding_x : 15
+
+            TextInput:
+                #background_color : 220/255, 220/255, 220/255   ,1
+                multiline : False
+                size_hint : 0.4,0.09
+                pos_hint : {'x':0.27 , 'top': 0.6}
+                font_size : 20
+                padding_y : [13]
+                padding_x : 15
+
+            TextInput:
+                #background_color: 200/255, 200/255, 200/255 , 1
+                multiline : False
+                size_hint : 0.4,0.09
+                pos_hint : {'x':0.27 , 'top': 0.48}
+                font_size : 20
+                padding_y : [13]
+                padding_x : 15
+
+            TextInput:
+                #background_color : 175/255, 175/255, 175/255 ,1
+                multiline : False
+                size_hint : 0.4,0.09
+                pos_hint : {'x':0.27 , 'top': 0.36}
+                font_size : 20
+                padding_y : [13]
+                padding_x : 15
+
+            TextInput:
+                #background_color : 150/255, 150/255, 150/255 ,1
+                multiline : False
+                size_hint : 0.4,0.09
+                pos_hint : {'x':0.27 , 'top': 0.24}
+                font_size : 20
+                font_color : 225/255,225/255,225/255,1
+                padding_y : [13]
+                padding_x : 15
+
+
+
+
+
+
